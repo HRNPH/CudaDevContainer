@@ -28,6 +28,8 @@ RUN apt autoremove -y
 RUN apt clean
 
 USER coder
+# Change Default Shell to Bash
+SHELL ["/bin/bash", "-c"]
 
 # Allow container to stop. See: https://github.com/microsoft/vscode-remote-release/issues/3512#issuecomment-1267053890
 # NOTE: May affect benchmarking
