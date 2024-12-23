@@ -18,13 +18,12 @@ apt-get install software-properties-common
 
 
 # Z Shell Setup with p10k
-export MY_USERNAME=rehab
 sudo apt-get install -y zsh
-sudo chsh -s /usr/bin/zsh $MY_USERNAME
+sudo chsh -s /usr/bin/zsh $USERNAME
 sh -c \"$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\"
-sudo sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/g' /home/$MY_USERNAME/.zshrc
-sudo sed -i 's/plugins=(git)/plugins=(git docker)/g' /home/$MY_USERNAME/.zshrc
-sudo chown -R $MY_USERNAME:$MY_USERNAME /home/$MY_USERNAME/.oh-my-zsh"
+sudo sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/g' /home/$USERNAME/.zshrc
+sudo sed -i 's/plugins=(git)/plugins=(git docker)/g' /home/$USERNAME/.zshrc
+sudo chown -R $USERNAME:$USERNAME /home/$USERNAME/.oh-my-zsh"
 
 # Install Python packages
 python3 -m pip install --upgrade pip
