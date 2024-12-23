@@ -7,7 +7,6 @@ RUN apt update &&  \
     apt -y install --no-install-recommends 
 
 # Do NOT modify UID from 1000
-# vscode updates this UID to the user building the container
 ARG USERNAME=rehab
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
