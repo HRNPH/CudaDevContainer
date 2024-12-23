@@ -19,7 +19,7 @@ apt-get install software-properties-common
 
 # Z Shell Setup with p10k
 export USERNAME=coder
-sudo chown -R $USERNAME:$USERNAME /home/workspace
+sudo chown -R $USERNAME:root /home/workspace
 
 # Install Python packages
 python3 -m pip install --upgrade pip
