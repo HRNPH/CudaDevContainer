@@ -7,7 +7,7 @@ RUN apt update &&  \
     apt -y install --no-install-recommends 
 
 # Do NOT modify UID from 1000
-ARG USERNAME=rehab
+ARG USERNAME=coder
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 ENV USERNAME=${USERNAME}
