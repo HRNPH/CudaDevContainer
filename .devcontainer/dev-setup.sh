@@ -18,7 +18,7 @@ apt-get install software-properties-common
 
 
 # Z Shell Setup with p10k
-export USERNAME=coder
+export USERNAME=$(whoami)
 sudo apt-get install -y zsh
 sudo chsh -s /usr/bin/zsh $USERNAME
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
