@@ -22,7 +22,7 @@ export MY_USERNAME=rehab
 sudo apt-get install -y zsh
 sudo chsh -s /usr/bin/zsh $MY_USERNAME
 sh -c \"$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\"
-sudo sed -i 's/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"agnoster\"/g' /home/$MY_USERNAME/.zshrc
+sudo sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/g' /home/$MY_USERNAME/.zshrc
 sudo sed -i 's/plugins=(git)/plugins=(git docker)/g' /home/$MY_USERNAME/.zshrc
 sudo chown -R $MY_USERNAME:$MY_USERNAME /home/$MY_USERNAME/.oh-my-zsh"
 
