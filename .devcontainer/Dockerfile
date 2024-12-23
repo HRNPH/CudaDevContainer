@@ -1,4 +1,10 @@
-FROM mcr.microsoft.com/vscode/devcontainers/base:0-ubuntu-22.04 as base
+ARG UBUNTU_VERSION="22.04"
+ARG CUDA_VERSION="12.1.1"
+ARG CUDNN_VERSION="8.9.2.26"
+ARG CUDNN_V="8"
+ARG PYTHON_VERSION="3.11"
+
+FROM nvidia/cuda:${CUDA_VERSION}-cudnn${CUDNN_V}-devel-ubuntu${UBUNTU_VERSION} AS base
 
 ARG DEBIAN_FRONTEND=noninteractive
 
