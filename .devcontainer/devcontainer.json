@@ -12,8 +12,9 @@
     "--security-opt",
     "seccomp=unconfined"
   ],
+  
   "updateContentCommand": "bash .devcontainer/dev-setup.sh",
-  "postCreateCommand": ["sudo update-pciids", "sudo ubuntu-drivers install", "sudo chown -R coder:coder /workspace", "nvidia-smi"],
+  "postCreateCommand": ["sudo update-pciids", "sudo chown -R coder:coder /workspace", "nvidia-smi"],
   "overrideCommand": false,
   "customizations": {
     "vscode": {

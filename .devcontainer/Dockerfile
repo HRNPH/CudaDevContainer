@@ -1,4 +1,4 @@
-FROM nvcr.io/nvidia/ai-workbench/python-cuda122:1.0.3 as base
+FROM mcr.microsoft.com/vscode/devcontainers/base:0-ubuntu-22.04 as base
 
 ARG DEBIAN_FRONTEND=noninteractive
 
