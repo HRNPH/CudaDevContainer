@@ -12,7 +12,7 @@
     "--security-opt",
     "seccomp=unconfined"
   ],
-  "updateContentCommand": "bash .devcontainer/install-dev-tools.sh",
+  "updateContentCommand": "bash .devcontainer/dev-setup.sh",
   "postCreateCommand": ["nvidia-smi"],
   "overrideCommand": false,
   "customizations": {
