@@ -24,7 +24,7 @@ sudo chsh -s /usr/bin/zsh $USERNAME
 sh -c \"$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\"
 sudo sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/g' /home/$USERNAME/.zshrc
 sudo sed -i 's/plugins=(git)/plugins=(git docker)/g' /home/$USERNAME/.zshrc
-sudo chown -R $USERNAME:$USERNAME /home/$USERNAME/.oh-my-zsh"
+sudo chown -R $USERNAME:$USERNAME /home/$USERNAME/.oh-my-zsh
 
 # Install Python packages
 python3 -m pip install --upgrade pip
