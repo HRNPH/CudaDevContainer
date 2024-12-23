@@ -27,7 +27,7 @@ RUN groupadd --gid $USER_GID $USERNAME \
 RUN apt autoremove -y
 RUN apt clean
 
-USER $USERNAME
+USER coder
 
 # Allow container to stop. See: https://github.com/microsoft/vscode-remote-release/issues/3512#issuecomment-1267053890
 # NOTE: May affect benchmarking
