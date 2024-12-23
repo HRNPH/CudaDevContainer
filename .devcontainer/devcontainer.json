@@ -31,5 +31,6 @@
         "ms-toolsai.tensorboard"
       ]
     }
-  }
+  },
+  "remoteUser": "root"
 }
