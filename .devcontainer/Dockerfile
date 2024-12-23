@@ -4,7 +4,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 # Additional Packages Installtions
 RUN apt update &&  \
-    apt -y install --no-install-recommends 
+    apt -y install --no-install-recommends software-properties-common
 
 # Do NOT modify UID from 1000
 ARG USERNAME=rehab
@@ -26,15 +26,22 @@ RUN groupadd --gid $USER_GID $USERNAME \
 
 
 # Coder Access to root, Must have for coder.com devcontainer
+# Create the user
 ENV CODER_USER=coder
-RUN usermod -aG sudo $CODER_USER
+RUN groupadd --gid 1001 $CODER_USER \
+    && useradd --uid 1001 --gid 1001 -m $CODER_USER \
+    && apt update \
+    && apt install -y sudo \
+    && echo $CODER_USER ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$CODER_USER \
+    && chmod 0440 /etc/sudoers.d/$CODER_USER \
+    && usermod -aG sudo $CODER_USER
 
 # Cleanup
 # RUN pip3 cache purge # cache is not enabled in the nvcr image
 RUN apt autoremove -y
 RUN apt clean
 
-USER root
+USER $USERNAME
 # Change Default Shell to Bash
 SHELL ["/bin/bash", "-c"]
 

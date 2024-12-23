@@ -14,7 +14,7 @@ apt-get update
 apt-get upgrade -y
 
 # Install Linux tools
-apt-get install software-properties-common
+# apt-get install software-properties-common
 
 
 # Z Shell Setup with p10k
