@@ -1,6 +1,7 @@
 {
   "name": "CUDA",
   "build": {
+    "context": ".", // Same directory as the devcontainer.json file
     "dockerfile": "Dockerfile",
     "args": {}
   },
