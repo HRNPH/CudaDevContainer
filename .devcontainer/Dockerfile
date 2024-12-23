@@ -4,7 +4,10 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 # Additional Packages Installtions
 RUN apt update &&  \
-    apt -y install --no-install-recommends software-properties-common
+    apt -y install --no-install-recommends software-properties-common \
+    && apt -y install --no-install-recommends locales \
+    && locale-gen en_US.UTF-8 \
+    && update-locale LANG=en_US.UTF-8
 
 # Do NOT modify UID from 1000
 ARG USERNAME=coder
