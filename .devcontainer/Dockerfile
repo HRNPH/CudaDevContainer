@@ -34,7 +34,7 @@ RUN usermod -aG sudo $CODER_USER
 RUN apt autoremove -y
 RUN apt clean
 
-USER rehab
+USER root
 # Change Default Shell to Bash
 SHELL ["/bin/bash", "-c"]
 
