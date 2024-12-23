@@ -13,7 +13,7 @@
     "seccomp=unconfined"
   ],
   "updateContentCommand": "bash .devcontainer/dev-setup.sh",
-  "postCreateCommand": ["sudo ubuntu-drivers autoinstall", "sudo chown -R coder:coder /workspace", "nvidia-smi"],
+  "postCreateCommand": ["sudo ubuntu-drivers install", "sudo chown -R coder:coder /workspace", "nvidia-smi"],
   "overrideCommand": false,
   "customizations": {
     "vscode": {
