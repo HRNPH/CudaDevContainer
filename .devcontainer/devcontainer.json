@@ -15,7 +15,7 @@
   ],
   
   "updateContentCommand": "bash .devcontainer/dev-setup.sh",
-  "postCreateCommand": ["sudo update-pciids", "sudo chown -R coder:coder /workspace", "nvidia-smi"],
+  "postCreateCommand": ["nvidia-smi"],
   "overrideCommand": false,
   "customizations": {
     "vscode": {
